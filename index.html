@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <title>Girokonto Student – Finanzübersicht</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Hauptnavigation">
+      <a class="brand" href="#overview" aria-label="Girokonto Student – Übersicht">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-name">nord<span>licht</span></span>
+      </a>
+      <p class="nav-caption">MENÜ</p>
+      <nav class="main-nav">
+        <a class="nav-link active" href="#overview"><span class="nav-icon" aria-hidden="true">⌂</span><span>Übersicht</span></a>
+        <a class="nav-link" href="#analyse"><span class="nav-icon" aria-hidden="true">⌁</span><span>Analyse</span></a>
+        <a class="nav-link" href="#statistik"><span class="nav-icon" aria-hidden="true">◷</span><span>Statistik</span></a>
+        <a class="nav-link" href="#buchungen"><span class="nav-icon" aria-hidden="true">▤</span><span>Buchungen</span></a>
+        <a class="nav-link" href="#simulator"><span class="nav-icon" aria-hidden="true">✳</span><span>Simulator</span></a>
+      </nav>
+      <div class="sidebar-account">
+        <span class="avatar">DK</span>
+        <span><strong>Demo-Konto</strong><small>Privatkonto</small></span>
+        <span class="account-menu" aria-hidden="true">···</span>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Privat</span><span class="breadcrumb-separator">/</span><strong>Finanzen</strong></div>
+        <div class="topbar-actions">
+          <span class="secure-status"><span class="status-dot"></span> Sicher &amp; privat</span>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Helles Design aktivieren" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Helles Design</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="overview-section" id="overview" aria-labelledby="account-name">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">GUTEN TAG</p>
+            <h1 id="account-name">Girokonto Student</h1>
+            <p class="subtitle">Dein finanzieller Überblick auf einen Blick.</p>
+          </div>
+          <div class="period-pill"><span class="calendar-icon" aria-hidden="true">▦</span> <span id="period-label">–</span></div>
+        </div>
+        <div class="kpi-grid" id="kpi-grid" aria-label="Finanzkennzahlen">
+          <article class="kpi-card kpi-card-primary glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">€</span><h2>Aktueller Saldo</h2><span class="info-tip" tabindex="0" aria-label="Formel: letzter Kontostand im Filter. Der aktuelle Saldo zeigt den Kontostand nach der letzten Buchung."></span></div>
+            <p class="kpi-value" id="kpi-balance">–</p>
+            <p class="kpi-change" id="kpi-balance-change"><span id="kpi-balance-arrow" aria-hidden="true">↓</span><strong id="kpi-balance-percent">–</strong><span>seit Startsaldo</span></p>
+            <p class="kpi-note" id="kpi-balance-note">Kontostand nach letzter Buchung</p>
+            <svg class="sparkline" id="sparkline-balance" aria-label="Monatsverlauf aktueller Saldo" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon income-kpi-icon" aria-hidden="true">↗</span><h2>Gesamteinnahmen</h2><span class="info-tip" tabindex="0" aria-label="Formel: Summe aller positiven Buchungsbeträge. Zeigt alle Gutschriften innerhalb des ausgewählten Zeitraums."></span></div>
+            <p class="kpi-value positive-value" id="kpi-income">–</p>
+            <p class="kpi-note">Summe aller Gutschriften</p>
+            <svg class="sparkline" id="sparkline-income" aria-label="Monatsverlauf der Einnahmen" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">↙</span><h2>Gesamtausgaben</h2><span class="info-tip" tabindex="0" aria-label="Formel: Summe der Absolutbeträge aller negativen Buchungen. Größere Werte bedeuten höhere Ausgaben im ausgewählten Zeitraum."></span></div>
+            <p class="kpi-value" id="kpi-expenses">–</p>
+            <p class="kpi-note">Summe aller Ausgaben</p>
+            <svg class="sparkline" id="sparkline-expenses" aria-label="Monatsverlauf der Ausgaben" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">±</span><h2>Netto-Cashflow</h2><span class="info-tip" tabindex="0" aria-label="Formel: Einnahmen minus Ausgaben. Positiv bedeutet einen Überschuss, negativ ein Defizit im ausgewählten Zeitraum."></span></div>
+            <p class="kpi-value" id="kpi-net">–</p>
+            <p class="kpi-note">Einnahmen minus Ausgaben</p>
+            <svg class="sparkline" id="sparkline-net" aria-label="Monatsverlauf des Netto-Cashflows" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">%</span><h2>Sparquote</h2><span class="info-tip" tabindex="0" aria-label="Formel: (Einnahmen minus Ausgaben) geteilt durch Einnahmen. Je höher die positive Quote, desto größer der Anteil der Einnahmen, der übrig bleibt."></span></div>
+            <p class="kpi-value" id="kpi-savings-rate">–</p>
+            <p class="kpi-note">Anteil der Einnahmen, der übrig bleibt</p>
+            <svg class="sparkline" id="sparkline-savings-rate" aria-label="Monatsverlauf der Sparquote" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">⌑</span><h2>Fixkostenquote</h2><span class="info-tip" tabindex="0" aria-label="Formel: (Miete plus Abos und Verträge) geteilt durch Einnahmen. Ein niedrigerer Anteil lässt mehr Spielraum für andere Ausgaben."></span></div>
+            <p class="kpi-value" id="kpi-fixed-rate">–</p>
+            <p class="kpi-note">Miete und Abos im Verhältnis zum Einkommen</p>
+            <svg class="sparkline" id="sparkline-fixed-rate" aria-label="Monatsverlauf der Fixkostenquote" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">Ø</span><h2>Ø Ausgaben pro Tag</h2><span class="info-tip" tabindex="0" aria-label="Formel: Gesamtausgaben geteilt durch Kalendertage im ausgewählten Zeitraum. Ein niedrigerer Tagesdurchschnitt bedeutet geringeren täglichen Geldabfluss."></span></div>
+            <p class="kpi-value" id="kpi-daily-expenses">–</p>
+            <p class="kpi-note">Durchschnitt über den Zeitraum</p>
+            <svg class="sparkline" id="sparkline-daily-expenses" aria-label="Monatsverlauf der durchschnittlichen Tagesausgaben" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">◷</span><h2>Runway</h2><span class="info-tip" tabindex="0" aria-label="Formel: aktueller Saldo geteilt durch durchschnittliche Tagesausgaben. Gibt an, wie viele Tage der Saldo bei gleichbleibendem Ausgabentempo reicht."></span></div>
+            <p class="kpi-value" id="kpi-runway">–</p>
+            <p class="kpi-note">Reichweite des Saldos bei aktuellem Tempo</p>
+            <svg class="sparkline" id="sparkline-runway" aria-label="Monatsverlauf des Runway" role="img"></svg>
+          </article>
+          <article class="kpi-card glass-card">
+            <div class="kpi-heading"><span class="kpi-icon" aria-hidden="true">↓</span><h2>Größte Einzelausgabe</h2><span class="info-tip" tabindex="0" aria-label="Formel: höchste einzelne Ausgabe nach Betrag. Zeigt den größten Geldabfluss und den zugehörigen Empfänger."></span></div>
+            <p class="kpi-value" id="kpi-largest-expense">–</p>
+            <p class="kpi-note" id="kpi-largest-expense-note">Empfänger: –</p>
+            <svg class="sparkline" id="sparkline-largest-expense" aria-label="Monatsverlauf der größten Einzelausgabe" role="img"></svg>
+          </article>
+        </div>
+      </section>
+
+      <section class="insights-grid" aria-label="Finanz-Score, Insights und Datenqualität">
+        <article class="panel glass-card finance-score-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">FINANZ-CHECK</p><h2>Dein Finanz-Score</h2></div>
+            <span class="info-tip score-info" tabindex="0" aria-label="Berechnung: Sparquote bis 40 Punkte, niedrige Fixkostenquote bis 30 Punkte und Stabilität des Saldos bis 30 Punkte. Die Saldo-Stabilität basiert auf dem Variationskoeffizienten täglicher Saldoänderungen."></span>
+          </div>
+          <div class="score-gauge" role="img" aria-label="Finanz-Score">
+            <svg viewBox="0 0 220 132" aria-hidden="true">
+              <path class="gauge-track" d="M 28 112 A 82 82 0 0 1 192 112"></path>
+              <path class="gauge-value" id="score-gauge-arc" d="M 28 112 A 82 82 0 0 1 192 112"></path>
+              <line class="gauge-needle" id="score-gauge-needle" x1="110" y1="112" x2="110" y2="39"></line>
+              <circle class="gauge-hub" cx="110" cy="112" r="6"></circle>
+            </svg>
+            <div class="gauge-score"><strong id="finance-score">0</strong><span>/ 100</span></div>
+          </div>
+          <p class="panel-subtitle score-caption" id="score-caption">Wird aus den gefilterten Daten berechnet.</p>
+        </article>
+        <article class="panel glass-card insights-panel">
+          <div class="panel-heading"><div><p class="eyebrow">AUTOMATISCHE ANALYSE</p><h2>Insights für dich</h2></div><span class="panel-icon" aria-hidden="true">✦</span></div>
+          <ul class="insights-list" id="insights-list"></ul>
+        </article>
+        <article class="panel glass-card month-compare-panel">
+          <div class="panel-heading"><div><p class="eyebrow">KATEGORIEN IM VERGLEICH</p><h2>Monatsvergleich</h2></div></div>
+          <div class="month-compare-controls"><label>Monat A<select id="compare-month-a"></select></label><span aria-hidden="true">↔</span><label>Monat B<select id="compare-month-b"></select></label></div>
+          <div class="month-compare-wrap"><table class="month-compare-table"><thead><tr><th>Kategorie</th><th id="compare-label-a">Monat A</th><th id="compare-label-b">Monat B</th><th>Änderung</th></tr></thead><tbody id="month-compare-rows"></tbody></table></div>
+        </article>
+        <details class="panel glass-card data-quality-panel" id="data-quality">
+          <summary><span><p class="eyebrow">PRÜFUNG DER DATEN</p><strong>Datenqualität</strong></span><span id="data-quality-status" class="quality-status">Wird geprüft …</span></summary>
+          <div id="data-quality-details" class="data-quality-details"></div>
+        </details>
+      </section>
+
+      <p class="chart-message" id="chart-message" role="status"></p>
+      <section class="analysis-section" id="analyse" aria-labelledby="analysis-title">
+        <div class="analysis-title-row">
+          <div><p class="eyebrow">DATEN &amp; TRENDS</p><h2 id="analysis-title">Finanzanalyse</h2><p class="panel-subtitle">Interaktive Einblicke in deine Kontobewegungen.</p></div>
+          <div class="filter-chip" id="active-filter-chip" hidden><span id="active-filter-label"></span><button type="button" id="clear-filter" aria-label="Filter entfernen">×</button></div>
+        </div>
+        <div class="analysis-grid" aria-label="Finanzdiagramme">
+          <article class="panel glass-card analysis-card balance-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">01 · KONTOVERLAUF</p><h2>Kontostandsverlauf</h2><p class="panel-subtitle">Zoom: Mausrad oder Shift + Ziehen · Verschieben: Ziehen</p></div>
+              <div class="chart-actions"><button class="chart-action" type="button" data-download-chart="balance-chart">PNG ↓</button><button class="chart-action" type="button" id="reset-balance-zoom">Zoom zurücksetzen</button></div>
+            </div>
+            <div class="chart-area balance-chart-area"><canvas id="balance-chart" aria-label="Kontostandsverlauf mit markiertem Minimum, Maximum und Startsaldo"></canvas></div>
+          </article>
+          <article class="panel glass-card analysis-card monthly-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">02 · MONATSÜBERSICHT</p><h2>Einnahmen, Ausgaben &amp; Netto</h2><p class="panel-subtitle">Monat anklicken, um Buchungen zu filtern</p></div>
+              <button class="chart-action" type="button" data-download-chart="monthly-chart">PNG ↓</button>
+            </div>
+            <div class="chart-area"><canvas id="monthly-chart" aria-label="Monatliche gruppierte Einnahmen- und Ausgabenbalken sowie Netto-Cashflow"></canvas></div>
+          </article>
+          <article class="panel glass-card analysis-card category-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">03 · AUSGABEN</p><h2>Ausgaben nach Kategorie</h2><p class="panel-subtitle">Kategorie anklicken, um Buchungen zu filtern</p></div>
+              <button class="chart-action" type="button" data-download-chart="category-chart">PNG ↓</button>
+            </div>
+            <div class="chart-area category-chart-area"><canvas id="category-chart" aria-label="Ausgaben nach Kategorie mit Gesamtsumme"></canvas></div>
+          </article>
+          <article class="panel glass-card analysis-card waterfall-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">04 · MONATLICHE AUFSCHLÜSSELUNG</p><h2>Wasserfall</h2><p class="panel-subtitle">Saldoentwicklung nach Kategorien</p></div>
+              <div class="chart-actions"><select id="waterfall-month" aria-label="Wasserfall-Monat"></select><button class="chart-action" type="button" data-download-chart="waterfall-chart">PNG ↓</button></div>
+            </div>
+            <div class="chart-area"><canvas id="waterfall-chart" aria-label="Wasserfalldiagramm mit Startsaldo, Einnahmen, Ausgabenkategorien und Endsaldo"></canvas></div>
+          </article>
+          <article class="panel glass-card analysis-card histogram-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">05 · VERTEILUNG</p><h2>Ausgabenbeträge</h2><p class="panel-subtitle">Histogramm mit 10-€-Klassen</p></div>
+              <button class="chart-action" type="button" data-download-chart="histogram-chart">PNG ↓</button>
+            </div>
+            <div class="chart-area"><canvas id="histogram-chart" aria-label="Histogramm der Ausgaben mit Mittelwert und Median"></canvas></div>
+            <div class="chart-legend-row"><span><i class="legend-swatch mean-swatch"></i>Mittelwert</span><span><i class="legend-swatch median-swatch"></i>Median</span></div>
+          </article>
+          <article class="panel glass-card analysis-card heatmap-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">06 · TÄGLICHE AKTIVITÄT</p><h2>Ausgaben-Kalender</h2><p class="panel-subtitle">Tag anklicken, um Buchungen zu filtern</p></div>
+              <button class="chart-action" type="button" data-download-heatmap>PNG ↓</button>
+            </div>
+            <div class="heatmap-layout">
+              <div class="heatmap-weekdays" aria-hidden="true"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span></div>
+              <div class="heatmap-scroll"><div class="heatmap-months" id="heatmap-months" aria-hidden="true"></div><div class="heatmap-grid" id="heatmap-grid" aria-label="Kalender-Heatmap täglicher Ausgaben"></div></div>
+            </div>
+            <div class="heatmap-legend"><span>Weniger</span><i class="heat-level-0"></i><i class="heat-level-1"></i><i class="heat-level-2"></i><i class="heat-level-3"></i><i class="heat-level-4"></i><span>Mehr</span></div>
+          </article>
+          <article class="panel glass-card analysis-card weekday-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">07 · WOCHENRHYTHMUS</p><h2>Ausgaben nach Wochentag</h2><p class="panel-subtitle">Durchschnitt je Kalendertag der Woche</p></div>
+              <button class="chart-action" type="button" data-download-chart="weekday-chart">PNG ↓</button>
+            </div>
+            <div class="chart-area"><canvas id="weekday-chart" aria-label="Durchschnittliche Ausgaben pro Wochentag"></canvas></div>
+          </article>
+          <article class="panel glass-card analysis-card forecast-panel">
+            <div class="panel-heading">
+              <div><p class="eyebrow">08 · PROGNOSE</p><h2>Saldo-Prognose bis September</h2><p class="panel-subtitle">Lineare Regression mit 95-%-Prognoseband</p></div>
+              <button class="chart-action" type="button" data-download-chart="forecast-chart">PNG ↓</button>
+            </div>
+            <div class="chart-area forecast-chart-area"><canvas id="forecast-chart" aria-label="Saldoverlauf und lineare Prognose bis September 2026 mit 95-Prozent-Prognoseband"></canvas></div>
+            <div class="forecast-metrics"><span>Steigung pro Monat <strong id="forecast-slope">–</strong></span><span>Bestimmtheitsmaß R² <strong id="forecast-r-squared">–</strong></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel glass-card statistics-panel" id="statistik">
+        <div class="panel-heading transactions-heading">
+          <div><p class="eyebrow">WISSENSCHAFTLICHE KENNWERTE</p><h2>Statistik der Ausgaben</h2><p class="panel-subtitle">Stichprobenkennwerte auf Basis aller gefilterten Ausgabenbeträge</p></div>
+          <span class="table-count" id="statistics-sample-count">n = –</span>
+        </div>
+        <div class="statistics-table-wrap">
+          <table class="statistics-table">
+            <thead><tr><th scope="col">Kennwert</th><th scope="col" class="numeric">Ergebnis</th></tr></thead>
+            <tbody id="statistics-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel glass-card transactions-panel" id="buchungen">
+        <div class="panel-heading transactions-heading">
+          <div><p class="eyebrow">KONTOAKTIVITÄT</p><h2>Deine Buchungen</h2><p class="panel-subtitle">Durchsuche, filtere und analysiere deine Transaktionen.</p></div>
+          <div class="transaction-actions">
+            <label class="group-control" for="transaction-grouping">Gruppieren nach
+              <select id="transaction-grouping">
+                <option value="none">Keine</option><option value="month">Monat</option><option value="category">Kategorie</option><option value="recipient">Empfänger</option><option value="payment">Zahlungsart</option>
+              </select>
+            </label>
+            <button type="button" class="chart-action export-csv-button" id="export-transactions">CSV exportieren ↓</button>
+          </div>
+        </div>
+        <div class="transaction-filter-panel" aria-label="Buchungen filtern">
+          <div class="filter-primary-row">
+            <label class="transaction-search" for="transaction-search"><span aria-hidden="true">⌕</span><input id="transaction-search" type="search" placeholder="Empfänger oder Verwendungszweck suchen…" autocomplete="off"></label>
+            <div class="date-filter">
+              <label>Von <input id="date-from" type="date"></label>
+              <label>Bis <input id="date-to" type="date"></label>
+              <select id="date-preset" aria-label="Zeitraum-Schnellauswahl"><option value="">Zeitraum</option><option value="month">Monat</option><option value="quarter">Quartal</option><option value="all">Alles</option></select>
+            </div>
+          </div>
+          <div class="category-filter-row"><span class="filter-label">Kategorien</span><div class="category-filter-chips" id="category-filter-chips"></div></div>
+          <div class="filter-secondary-row">
+            <label>Zahlungsart<select id="payment-filter"><option value="">Alle Zahlungsarten</option></select></label>
+            <label>Buchungstyp<select id="flow-filter"><option value="all">Einnahmen &amp; Ausgaben</option><option value="income">Nur Einnahmen</option><option value="expense">Nur Ausgaben</option></select></label>
+            <label>Wochentag<select id="weekday-filter"><option value="all">Alle Tage</option><option value="weekdays">Werktage</option><option value="weekend">Wochenende</option><option value="0">Montag</option><option value="1">Dienstag</option><option value="2">Mittwoch</option><option value="3">Donnerstag</option><option value="4">Freitag</option><option value="5">Samstag</option><option value="6">Sonntag</option></select></label>
+            <div class="amount-filter"><div class="amount-filter-heading"><span>Betragsbereich</span><output id="amount-range-label">–</output></div><div class="range-control"><input id="amount-min" type="range" min="0" max="1" value="0" aria-label="Minimaler Betrag"><input id="amount-max" type="range" min="0" max="1" value="1" aria-label="Maximaler Betrag"></div></div>
+            <button type="button" class="reset-filters-button" id="reset-transaction-filters">Alle Filter zurücksetzen</button>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><button type="button" class="sort-button" data-sort="datum">Datum<span class="sort-indicator"></span></button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="empfaenger">Empfänger<span class="sort-indicator"></span></button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="zweck">Verwendungszweck<span class="sort-indicator"></span></button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="zahlungsart">Zahlungsart<span class="sort-indicator"></span></button></th>
+                <th scope="col" class="numeric"><button type="button" class="sort-button numeric" data-sort="betrag">Betrag<span class="sort-indicator"></span></button></th>
+                <th scope="col" class="numeric"><button type="button" class="sort-button numeric" data-sort="saldo">Kontostand<span class="sort-indicator"></span></button></th>
+              </tr>
+            </thead>
+            <tbody id="transaction-rows"></tbody>
+          </table>
+        </div>
+        <div class="transaction-table-footer"><span id="transaction-count-label">0 Buchungen</span><span>Summe der Buchungen <strong id="transaction-total">0,00&nbsp;€</strong></span></div>
+      </section>
+
+      <dialog class="transaction-detail-dialog" id="transaction-detail">
+        <div class="detail-dialog-header"><div><p class="eyebrow">BUCHUNGSDETAILS</p><h2 id="detail-title">Buchung</h2></div><button type="button" id="close-transaction-detail" class="dialog-close" aria-label="Details schließen">×</button></div>
+        <dl class="transaction-detail-grid" id="transaction-detail-fields"></dl>
+        <section class="related-transactions"><h3>Weitere Buchungen beim selben Empfänger</h3><div id="related-transaction-list"></div></section>
+      </dialog>
+
+      <section class="simulator-section" id="simulator">
+        <div class="simulator-section-heading"><p class="eyebrow">SZENARIEN &amp; ZIELE</p><h2>Dein Finanz-Simulator</h2><p class="panel-subtitle">Teste, wie sich kleine Änderungen auf dein finanzielles Polster auswirken.</p></div>
+        <div class="simulator-grid">
+          <article class="panel glass-card what-if-panel">
+            <div class="panel-heading"><div><p class="eyebrow">WAS WÄRE, WENN?</p><h2>Monatliche Stellschrauben</h2></div><span class="simulator-icon" aria-hidden="true">✳</span></div>
+            <label class="subscription-toggle"><span><strong>Spotify kündigen</strong><small>Monatliche Abozahlungen</small></span><input type="checkbox" id="cancel-spotify"><span class="toggle-track"></span></label>
+            <label class="subscription-toggle"><span><strong>Netflix kündigen</strong><small>Monatliche Abozahlungen</small></span><input type="checkbox" id="cancel-netflix"><span class="toggle-track"></span></label>
+            <label class="simulator-slider"><span><strong>Lohnänderung</strong><output id="salary-change-label">0 %</output></span><input id="salary-change" type="range" min="-20" max="20" step="1" value="0"><small>Veränderung gegenüber dem durchschnittlichen Monatslohn</small></label>
+            <label class="simulator-slider"><span><strong>Freizeitausgaben</strong><output id="leisure-change-label">0 %</output></span><input id="leisure-change" type="range" min="-50" max="50" step="1" value="0"><small>Veränderung für Kategorie „Freizeit &amp; Essen“</small></label>
+            <div class="simulator-results"><div><span>Zusätzlich pro Jahr</span><strong id="simulator-yearly-saving">–</strong></div><div><span>Saldo in 12 Monaten</span><strong id="simulator-projected-balance">–</strong></div></div>
+            <div class="simulator-chart-area"><canvas id="simulator-chart" aria-label="Prognose des Kontostands im Was-wäre-wenn-Szenario"></canvas></div>
+          </article>
+          <article class="panel glass-card savings-goal-panel">
+            <div class="panel-heading"><div><p class="eyebrow">SPARZIEL</p><h2>Ein Ziel vor Augen</h2><p class="panel-subtitle">Dein Fortschritt bei aktuellem Spar-Tempo</p></div><span class="panel-icon" aria-hidden="true">◎</span></div>
+            <div class="goal-controls"><label>Zielbetrag (€)<input type="number" id="goal-amount" min="1" step="50" value="2000"></label><label>Zieldatum<input type="date" id="goal-date"></label></div>
+            <div class="goal-progress-wrap">
+              <div class="goal-ring" id="goal-ring" role="img" aria-label="Fortschritt zum Sparziel"><div><strong id="goal-progress">0 %</strong><span>erreicht</span></div></div>
+              <div class="goal-result"><strong id="goal-status">Ziel wird berechnet</strong><p id="goal-monthly-needed">–</p><p id="goal-current-pace">–</p></div>
+            </div>
+            <div class="goal-breakdown"><span>Aktueller Saldo <strong id="goal-current-balance">–</strong></span><span>Fehlbetrag <strong id="goal-remaining">–</strong></span></div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="page-footer">Fiktiver, KI-generierter Beispieldatensatz · Website mit KI-Unterstützung (GitHub Copilot) erstellt · Studienprojekt, kein dauerhaftes Angebot</footer>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿Date;Recipient/Payer;Payment reference;Amount;Account balance;Category
+01.01.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 01/2026 inkl. NK;-420,00;430,00;Essen, Trinken, Miete
+02.01.2026;DB Vertrieb GmbH;Deutschlandticket 01.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;367,00;Anderes
+02.01.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 02.01.2026 09:52 Terminal-Nr. 64979640 LIDL DIENSTLEISTUNG;-56,85;310,15;Essen, Trinken, Miete
+05.01.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 01/2026;300,00;610,15;Geldeingang
+05.01.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 01/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;597,16;Anderes
+05.01.2026;Rossmann;Kartenzahlung girocard 05.01.2026 19:25 Terminal-Nr. 68174896 ROSSMANN 2213;-8,62;588,54;Anderes
+06.01.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 06.01.2026 19:18 Terminal-Nr. 60577582 KSK TUEBINGEN;-50,00;538,54;Anderes
+09.01.2026;ALDI SUED;Kartenzahlung girocard 09.01.2026 18:22 Terminal-Nr. 60297539 ALDI SUED;-31,43;507,11;Essen, Trinken, Miete
+10.01.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;500,12;Unterhaltung
+11.01.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 11.01.2026 19:22 Terminal-Nr. 62688421 KSK TUEBINGEN;-20,00;480,12;Anderes
+14.01.2026;dm-drogerie markt;Kartenzahlung girocard 14.01.2026 11:03 Terminal-Nr. 65813739 DM FIL.1764;-15,31;464,81;Anderes
+18.01.2026;Studierendenwerk Tuebingen-Hohenheim;Kartenzahlung girocard 18.01.2026 19:37 Terminal-Nr. 64121555 AUFLADUNG MENSAKARTE;-15,00;449,81;Essen, Trinken, Miete
+19.01.2026;Netflix International B.V.;Netflix.com 2420620404 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;435,82;Unterhaltung
+19.01.2026;AMAZON PAYMENTS EUROPE S.C.A.;305-9903543-4820973 Amazon.de Z8QAT02VQAZ5ZNEF MREF: Z8QAT02VQA CRED: DE94ZZZ00000561653;-44,10;391,72;Anderes
+24.01.2026;AMAZON PAYMENTS EUROPE S.C.A.;305-2449555-3444917 Amazon.de SR90WXSDXS9Y290P MREF: SR90WXSDXS CRED: DE94ZZZ00000561653;-17,00;374,72;Anderes
+26.01.2026;Studierendenwerk Tuebingen-Hohenheim;Kartenzahlung girocard 26.01.2026 10:59 Terminal-Nr. 63452502 AUFLADUNG MENSAKARTE;-20,00;354,72;Essen, Trinken, Miete
+26.01.2026;PayPal Europe S.a.r.l. et Cie S.C.A;9938442126455 PP.1780.PP . Vinted UAB, Ihr Einkauf bei Vinted UAB MREF: 9978627885783 CRED: LU96ZZZ0000000000000000058;-12,56;342,16;Anderes
+26.01.2026;AMAZON PAYMENTS EUROPE S.C.A.;305-7252191-2402528 Amazon.de NJ16CBNZBAZKT1BE MREF: NJ16CBNZBA CRED: DE94ZZZ00000561653;-32,35;309,81;Anderes
+29.01.2026;EDEKA;Kartenzahlung girocard 29.01.2026 16:00 Terminal-Nr. 67708704 EDEKA Center;-16,11;293,70;Essen, Trinken, Miete
+30.01.2026;Neckartal Logistik GmbH;LOHN/GEHALT 01/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;562,92;856,62;Geldeingang
+01.02.2026;AMAZON PAYMENTS EUROPE S.C.A.;302-5024076-4560523 Amazon.de 097N80JMZBSED17C MREF: 097N80JMZB CRED: DE94ZZZ00000561653;-39,53;817,09;Anderes
+02.02.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 02/2026;300,00;1117,09;Geldeingang
+02.02.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 02/2026 inkl. NK;-420,00;697,09;Essen, Trinken, Miete
+02.02.2026;DB Vertrieb GmbH;Deutschlandticket 02.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;634,09;Anderes
+02.02.2026;Kaufland;Kartenzahlung girocard 02.02.2026 15:50 Terminal-Nr. 69666567 KAUFLAND TUEBINGEN;-87,96;546,13;Essen, Trinken, Miete
+03.02.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 03.02.2026 18:12 Terminal-Nr. 63318470 LIDL DIENSTLEISTUNG;-14,37;531,76;Essen, Trinken, Miete
+05.02.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 02/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;518,77;Anderes
+06.02.2026;REWE Markt GmbH;Kartenzahlung girocard 06.02.2026 19:41 Terminal-Nr. 67211946 REWE SAGT DANKE;-22,85;495,92;Essen, Trinken, Miete
+09.02.2026;Universitaet Tuebingen;Semesterbeitrag SoSe 2026 Matr.-Nr. 6123457;-168,30;327,62;Anderes
+11.02.2026;Boulderhalle Tuebingen;Kartenzahlung girocard 11.02.2026 11:36 Terminal-Nr. 61013342 BOULDERHALLE;-38,51;289,11;Freizeit
+12.02.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;282,12;Unterhaltung
+16.02.2026;Netflix International B.V.;Netflix.com 4491580513 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;268,13;Unterhaltung
+18.02.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 18.02.2026 16:52 Terminal-Nr. 66282778 KSK TUEBINGEN;-30,00;238,13;Anderes
+19.02.2026;ALDI SUED;Kartenzahlung girocard 19.02.2026 17:26 Terminal-Nr. 60942213 ALDI SUED;-11,64;226,49;Essen, Trinken, Miete
+21.02.2026;Lieferando.de;Lieferando.de Bestellung 3K9QX7 Takeaway.com 21.02.2026 MREF: TKW-4419283 CRED: NL22ZZZ582639030000;-18,40;208,09;Essen, Trinken, Miete
+24.02.2026;EDEKA;Kartenzahlung girocard 24.02.2026 12:08 Terminal-Nr. 65871304 EDEKA Center;-17,92;190,17;Essen, Trinken, Miete
+27.02.2026;Neckartal Logistik GmbH;LOHN/GEHALT 02/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;604,87;795,04;Geldeingang
+01.03.2026;Kaufland;Kartenzahlung girocard 01.03.2026 10:10 Terminal-Nr. 69251723 KAUFLAND TUEBINGEN;-55,55;739,49;Essen, Trinken, Miete
+01.03.2026;EDEKA;Kartenzahlung girocard 01.03.2026 13:51 Terminal-Nr. 69587303 EDEKA Center;-35,82;703,67;Essen, Trinken, Miete
+02.03.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 03/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;690,68;Anderes
+03.03.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 03/2026;300,00;990,68;Geldeingang
+03.03.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 03/2026 inkl. NK;-420,00;570,68;Essen, Trinken, Miete
+03.03.2026;DB Vertrieb GmbH;Deutschlandticket 03.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;507,68;Anderes
+05.03.2026;ALDI SUED;Kartenzahlung girocard 05.03.2026 12:10 Terminal-Nr. 64750023 ALDI SUED;-85,73;421,95;Essen, Trinken, Miete
+07.03.2026;Lena Hoffmann;Pizza Freitag + Kino;-14,50;407,45;Unterhaltung
+08.03.2026;EDEKA;Kartenzahlung girocard 08.03.2026 14:53 Terminal-Nr. 62987053 EDEKA Center;-24,09;383,36;Essen, Trinken, Miete
+09.03.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;376,37;Unterhaltung
+11.03.2026;AMAZON PAYMENTS EUROPE S.C.A.;302-3483811-8993857 Amazon.de T629U1K8MK66Z3S9 MREF: T629U1K8MK CRED: DE94ZZZ00000561653;-61,34;315,03;Anderes
+16.03.2026;Netflix International B.V.;Netflix.com 5549340858 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;301,04;Unterhaltung
+17.03.2026;Kaufland;Kartenzahlung girocard 17.03.2026 11:39 Terminal-Nr. 64196832 KAUFLAND TUEBINGEN;-95,55;205,49;Essen, Trinken, Miete
+20.03.2026;Bar Barrique Tuebingen;Kartenzahlung girocard 20.03.2026 22:47 Terminal-Nr. 68120453 BARRIQUE TUEBINGEN;-16,80;188,69;Essen, Trinken, Miete
+22.03.2026;Studierendenwerk Tuebingen-Hohenheim;Kartenzahlung girocard 22.03.2026 15:52 Terminal-Nr. 63702505 AUFLADUNG MENSAKARTE;-25,00;163,69;Essen, Trinken, Miete
+27.03.2026;Neckartal Logistik GmbH;LOHN/GEHALT 03/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;642,94;806,63;Geldeingang
+31.03.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 31.03.2026 16:19 Terminal-Nr. 67977785 LIDL DIENSTLEISTUNG;-33,41;773,22;Essen, Trinken, Miete
+01.04.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 04/2026 inkl. NK;-420,00;353,22;Essen, Trinken, Miete
+01.04.2026;AMAZON PAYMENTS EUROPE S.C.A.;303-8042006-8168263 Amazon.de 1V0V8HE367LF3VR6 MREF: 1V0V8HE367 CRED: DE94ZZZ00000561653;-21,36;331,86;Anderes
+02.04.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 04/2026;300,00;631,86;Geldeingang
+02.04.2026;Kaufland;Kartenzahlung girocard 02.04.2026 11:18 Terminal-Nr. 60935439 KAUFLAND TUEBINGEN;-17,58;614,28;Essen, Trinken, Miete
+03.04.2026;DB Vertrieb GmbH;Deutschlandticket 04.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;551,28;Anderes
+06.04.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 04/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;538,29;Anderes
+06.04.2026;Rossmann;Kartenzahlung girocard 06.04.2026 10:57 Terminal-Nr. 65357113 ROSSMANN 2213;-18,23;520,06;Anderes
+07.04.2026;PayPal Europe S.a.r.l. et Cie S.C.A;4837608854306 PP.6729.PP . ZALANDO SE, Ihr Einkauf bei ZALANDO SE MREF: 8663004325775 CRED: LU96ZZZ0000000000000000058;-46,45;473,61;Anderes
+08.04.2026;Kaufland;Kartenzahlung girocard 08.04.2026 16:33 Terminal-Nr. 66089299 KAUFLAND TUEBINGEN;-70,07;403,54;Essen, Trinken, Miete
+08.04.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 08.04.2026 20:45 Terminal-Nr. 69942921 LIDL DIENSTLEISTUNG;-27,53;376,01;Essen, Trinken, Miete
+09.04.2026;AMAZON PAYMENTS EUROPE S.C.A.;306-8857804-3113262 Amazon.de 1EEG3AZ2JHV3MEL1 MREF: 1EEG3AZ2JH CRED: DE94ZZZ00000561653;-18,51;357,50;Anderes
+11.04.2026;Ristorante Da Gino;Kartenzahlung girocard 11.04.2026 20:31 Terminal-Nr. 61775029 DA GINO TUEBINGEN;-21,90;335,60;Essen, Trinken, Miete
+13.04.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;328,61;Unterhaltung
+13.04.2026;AMAZON PAYMENTS EUROPE S.C.A.;302-4325346-3104806 Amazon.de 1YQCP7KFEGUCWMFT MREF: 1YQCP7KFEG CRED: DE94ZZZ00000561653;-29,27;299,34;Anderes
+17.04.2026;Neckar Direkt Versicherung AG;Privathaftpflicht Jahresbeitrag 2026/27 Vers.-Nr. PH-3318204 MREF: ND3318204 CRED: DE41ZZZ00000248813;-54,60;244,74;Anderes
+18.04.2026;Netflix International B.V.;Netflix.com 5460483362 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;230,75;Unterhaltung
+24.04.2026;Studierendenwerk Tuebingen-Hohenheim;Kartenzahlung girocard 24.04.2026 13:16 Terminal-Nr. 62543117 AUFLADUNG MENSAKARTE;-20,00;210,75;Essen, Trinken, Miete
+25.04.2026;Lieferando.de;Lieferando.de Bestellung 7TPM2R Takeaway.com 25.04.2026 MREF: TKW-4419283 CRED: NL22ZZZ582639030000;-15,90;194,85;Essen, Trinken, Miete
+26.04.2026;EDEKA;Kartenzahlung girocard 26.04.2026 15:16 Terminal-Nr. 60704357 EDEKA Center;-48,04;146,81;Essen, Trinken, Miete
+28.04.2026;Neckartal Logistik GmbH;LOHN/GEHALT 04/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;572,55;719,36;Geldeingang
+01.05.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 05/2026 inkl. NK;-420,00;299,36;Essen, Trinken, Miete
+04.05.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 05/2026;300,00;599,36;Geldeingang
+04.05.2026;DB Vertrieb GmbH;Deutschlandticket 05.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;536,36;Anderes
+05.05.2026;PayPal Europe S.a.r.l. et Cie S.C.A;8056101965174 PP.5877.PP . Thalia Buecher GmbH, Ihr Einkauf bei Thalia Buecher GmbH MREF: 3381374424007 CRED: LU96ZZZ0000000000000000058;-68,98;467,38;Freizeit
+05.05.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 05.05.2026 10:01 Terminal-Nr. 64080381 LIDL DIENSTLEISTUNG;-53,06;414,32;Essen, Trinken, Miete
+06.05.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 05/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;401,33;Anderes
+06.05.2026;ALDI SUED;Kartenzahlung girocard 06.05.2026 19:02 Terminal-Nr. 65950085 ALDI SUED;-67,15;334,18;Essen, Trinken, Miete
+08.05.2026;EDEKA;Kartenzahlung girocard 08.05.2026 14:11 Terminal-Nr. 62275619 EDEKA Center;-28,80;305,38;Essen, Trinken, Miete
+10.05.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;298,39;Unterhaltung
+10.05.2026;AMAZON PAYMENTS EUROPE S.C.A.;304-9471014-8816160 Amazon.de E0JQUXU88NMTQDBA MREF: E0JQUXU88N CRED: DE94ZZZ00000561653;-54,30;244,09;Anderes
+12.05.2026;Kaufland;Kartenzahlung girocard 12.05.2026 09:43 Terminal-Nr. 64546138 KAUFLAND TUEBINGEN;-36,57;207,52;Essen, Trinken, Miete
+12.05.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 12.05.2026 11:58 Terminal-Nr. 69608516 KSK TUEBINGEN;-20,00;187,52;Anderes
+16.05.2026;Jonas Weber;Geburtstagsgeschenk Marie Anteil;-10,00;177,52;Anderes
+18.05.2026;Netflix International B.V.;Netflix.com 8526192840 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;163,53;Unterhaltung
+20.05.2026;Boulderhalle Tuebingen;Kartenzahlung girocard 20.05.2026 11:37 Terminal-Nr. 66070633 BOULDERHALLE;-20,34;143,19;Freizeit
+27.05.2026;Neckartal Logistik GmbH;LOHN/GEHALT 05/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;633,94;777,13;Geldeingang
+29.05.2026;Kuckuck Bar;Kartenzahlung girocard 29.05.2026 23:14 Terminal-Nr. 66403817 KUCKUCK TUEBINGEN;-12,60;764,53;Essen, Trinken, Miete
+31.05.2026;AMAZON PAYMENTS EUROPE S.C.A.;306-4313072-4573292 Amazon.de GP21P6DP7JB6QMAG MREF: GP21P6DP7J CRED: DE94ZZZ00000561653;-40,81;723,72;Anderes
+02.06.2026;Mueller, Thomas;DAUERAUFTRAG Unterstuetzung 06/2026;300,00;1023,72;Geldeingang
+02.06.2026;Telefonica Germany GmbH + Co. OHG;Kd-Nr. 7140382266 Rechnung 06/2026 MREF: 1EXN73KQ2WP9 CRED: DE26ZZZ00000031258;-12,99;1010,73;Anderes
+03.06.2026;Schneider, Katrin;DAUERAUFTRAG Miete Zimmer WG 06/2026 inkl. NK;-420,00;590,73;Essen, Trinken, Miete
+03.06.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 03.06.2026 08:29 Terminal-Nr. 62590576 LIDL DIENSTLEISTUNG;-22,52;568,21;Essen, Trinken, Miete
+04.06.2026;DB Vertrieb GmbH;Deutschlandticket 06.2026 Abo-Nr. 48302917 MREF: DT-0048302917 CRED: DE25ZZZ00000007758;-63,00;505,21;Anderes
+06.06.2026;Kaufland;Kartenzahlung girocard 06.06.2026 09:27 Terminal-Nr. 61356878 KAUFLAND TUEBINGEN;-18,56;486,65;Essen, Trinken, Miete
+06.06.2026;Studierendenwerk Tuebingen-Hohenheim;Kartenzahlung girocard 06.06.2026 14:31 Terminal-Nr. 67213894 AUFLADUNG MENSAKARTE;-20,00;466,65;Essen, Trinken, Miete
+09.06.2026;PayPal Europe S.a.r.l. et Cie S.C.A;1362372769979 PP.7516.PP . Steam Games, Ihr Einkauf bei Steam Games MREF: 3544628330443 CRED: LU96ZZZ0000000000000000058;-23,57;443,08;Unterhaltung
+11.06.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 11.06.2026 20:38 Terminal-Nr. 60167753 KSK TUEBINGEN;-50,00;393,08;Anderes
+13.06.2026;Spotify AB;P2C4A81F3E Spotify Premium Student MREF: 8XHQ2LTYC CRED: SE30ZZZ70000000002;-6,99;386,09;Unterhaltung
+13.06.2026;dm-drogerie markt;Kartenzahlung girocard 13.06.2026 16:28 Terminal-Nr. 64603431 DM FIL.1764;-9,22;376,87;Anderes
+13.06.2026;Vapiano Tuebingen;Kartenzahlung girocard 13.06.2026 19:52 Terminal-Nr. 62291746 VAPIANO TUEBINGEN;-17,40;359,47;Essen, Trinken, Miete
+20.06.2026;Netflix International B.V.;Netflix.com 6706964252 MREF: NFLX-61734820 CRED: NL64ZZZ341973120000;-13,99;345,48;Unterhaltung
+20.06.2026;Kreissparkasse Tuebingen;Bargeldauszahlung GA 20.06.2026 15:46 Terminal-Nr. 60656872 KSK TUEBINGEN;-50,00;295,48;Anderes
+21.06.2026;EDEKA;Kartenzahlung girocard 21.06.2026 09:18 Terminal-Nr. 67712402 EDEKA Center;-33,17;262,31;Essen, Trinken, Miete
+22.06.2026;PayPal Europe S.a.r.l. et Cie S.C.A;8861022450215 PP.2278.PP . Thalia Buecher GmbH, Ihr Einkauf bei Thalia Buecher GmbH MREF: 1271757208950 CRED: LU96ZZZ0000000000000000058;-38,26;224,05;Freizeit
+25.06.2026;AMAZON PAYMENTS EUROPE S.C.A.;302-1997086-1095409 Amazon.de 02P6B99SZPYV4PVW MREF: 02P6B99SZP CRED: DE94ZZZ00000561653;-33,38;190,67;Anderes
+28.06.2026;Lidl Vertriebs GmbH & Co. KG;Kartenzahlung girocard 28.06.2026 10:30 Terminal-Nr. 68492756 LIDL DIENSTLEISTUNG;-52,68;137,99;Essen, Trinken, Miete
+30.06.2026;Neckartal Logistik GmbH;LOHN/GEHALT 06/2026 PERS-NR 004821 SVWZ+Entgeltabrechnung;589,55;727,54;Geldeingang
+30.06.2026;REWE Markt GmbH;Kartenzahlung girocard 30.06.2026 09:15 Terminal-Nr. 68836279 REWE SAGT DANKE;-21,40;706,14;Essen, Trinken, Miete
